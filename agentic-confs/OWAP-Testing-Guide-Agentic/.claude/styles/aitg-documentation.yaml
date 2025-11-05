@@ -1,0 +1,95 @@
+name: aitg-documentation
+description: "Output style for general AITG documentation, content management, and site maintenance"
+style: |
+  When editing AITG documentation and managing site content:
+
+  📖 FORMATTING STANDARDS:
+  - Maintain consistent markdown formatting throughout all documents
+  - Use descriptive, hierarchical headings: # (title), ## (major section), ### (subsection), #### (details)
+  - Include clear table of contents for longer documents (>5 sections)
+  - Use proper markdown syntax: **bold**, *italic*, `code`, [links](url)
+  - Ensure consistent spacing: blank line before/after headers, lists, code blocks
+
+  🔗 LINKING REQUIREMENTS:
+  - Use relative paths for internal links: [Text](../section/file.md)
+  - Validate image references: ![Alt Text](../images/filename.png)
+  - Cross-reference related AITG test cases: [AITG-APP-01](tests/AITG-APP-01_Testing_for_Prompt_Injection.md)
+  - Use descriptive link text (avoid "click here" or "read more")
+  - Include external link indicators for off-site resources
+
+  📋 CONTENT ORGANIZATION:
+  - Organize content logically by threat category (APP/MOD/INF/DAT)
+  - Maintain consistent navigation structure across all documents
+  - Include breadcrumbs and "Previous/Next" navigation where appropriate
+  - Use clear, scannable headings that support document outlining
+  - Group related concepts together with consistent terminology
+
+  🎯 AITG-SPECIFIC CONVENTIONS:
+  - Reference test cases using full AITG-[CAT]-[NUM] format consistently
+  - Maintain the four-category color coding: 🟦 APP, 🟪 MOD, 🟩 INF, 🟨 DAT
+  - Include threat source attribution (OWASP Top 10 LLM, AI Exchange, etc.)
+  - Cross-reference framework mappings and threat model alignments
+  - Use consistent domain categorization: Security, Privacy, RAI, Trustworthy AI
+
+  📚 ACADEMIC AND PROFESSIONAL STANDARDS:
+  - Follow OWASP documentation standards and style guidelines
+  - Use professional, accessible language suitable for diverse technical audiences
+  - Include proper attribution for all external sources and references
+  - Maintain consistency with established cybersecurity and AI terminology
+  - Ensure accessibility compliance (alt text for images, clear headings)
+
+  🌐 JEKYLL SITE CONSIDERATIONS:
+  - Include proper YAML front matter for Jekyll processing
+  - Use Jekyll-compatible markdown syntax and avoid unsupported extensions
+  - Optimize image sizes and formats for web display
+  - Consider site navigation and user experience across all devices
+  - Maintain fast load times and efficient site structure
+
+  📊 TABLES AND DATA PRESENTATION:
+  - Use markdown tables for structured data (test mappings, tool comparisons)
+  - Include clear headers and maintain consistent column formatting
+  - Provide table summaries for complex data sets
+  - Use proper alignment for numeric data (right-align numbers)
+  - Include table captions where helpful for context
+
+  🔄 MAINTENANCE AND UPDATES:
+  - Keep content current with latest OWASP standards and framework updates
+  - Update broken links and deprecated tool references promptly
+  - Maintain version information for referenced standards and guidelines
+  - Include "last updated" dates for time-sensitive content
+  - Archive obsolete content rather than deleting (for historical reference)
+
+  📝 EXAMPLE DOCUMENTATION STRUCTURE:
+  ```markdown
+  # [Document Title]
+
+  ## Overview
+  [Brief description of document purpose and scope]
+
+  ## Table of Contents
+  - [Section 1](#section-1)
+  - [Section 2](#section-2)
+
+  ## Section 1
+  [Content with proper formatting, links, and references]
+
+  ### Subsection 1.1
+  [Detailed information with examples]
+
+  ## References
+  - [Consistent citation format]
+
+  ---
+  **Navigation**: [Previous](../prev.md) | [Next](../next.md) | [Home](../README.md)
+  ```
+
+  🎯 QUALITY CHECKLIST:
+  - [ ] All internal links functional and properly formatted
+  - [ ] Images display correctly with appropriate alt text
+  - [ ] Headings create logical document structure
+  - [ ] Content follows AITG style and terminology conventions
+  - [ ] External references are current and accessible
+  - [ ] Jekyll build completes without errors or warnings
+  - [ ] Content is accessible and professionally presented
+
+  Remember: Documentation quality directly impacts the usability and adoption of AITG methodologies. Clear, well-organized, and consistently formatted content helps security professionals effectively implement AI testing practices.

@@ -1,0 +1,97 @@
+name: aitg-security-content
+description: "Output style for reviewing and creating AI security test methodologies in AITG format"
+style: |
+  When working with AITG security content and test methodologies:
+
+  📋 STRUCTURE REQUIREMENTS:
+  - Always follow the standard AITG format with these sections in order:
+    1. ## AITG-[CAT]-[NUM] - Testing for [Vulnerability Name]
+    2. ### Summary (brief vulnerability description and AI system impact)
+    3. ### Test Objectives (bulleted list of specific testing goals)
+    4. ### Test/Payloads (sanitized examples with clear vulnerability indicators)
+    5. ### Attended Output (expected secure system behavior)
+    6. ### Remediation (mitigation strategies and implementation guidance)
+    7. ### Suggested Tools for This Specific Test (current, maintained tools)
+    8. ### References (OWASP, academic, and industry sources)
+
+  - Use proper AITG test ID format: AITG-[APP|MOD|INF|DAT]-[01-99]
+  - Include clear section headers with consistent markdown formatting
+  - Provide educational context without enabling malicious exploitation
+
+  🔒 SECURITY REQUIREMENTS:
+  - CRITICAL: Use sanitization markers in all examples:
+    • <SECRET> or <PASSWORD> for credentials
+    • <API_KEY> or <TOKEN> for authentication tokens
+    • <CMD_PLACEHOLDER> for system commands
+    • <IP_ADDR> for IP addresses, or use 192.0.2.x (RFC 5737)
+    • <REDACTED> for sensitive code sections
+    • [REMOVE_EXEC] for dangerous operations
+
+  - MANDATORY: Include educational disclaimer:
+    "⚠️ EDUCATIONAL NOTICE: This example is for security testing education only.
+    Do not attempt to execute these examples against systems you do not own or
+    without explicit permission. Follow responsible disclosure practices."
+
+  - Use placeholder domains: example.com, test.local, localhost
+  - Replace real system paths with generic examples: /path/to/file, <PATH>
+  - Ensure all payload examples are non-actionable for malicious use
+
+  📚 CONTENT GUIDELINES:
+  - Reference current OWASP standards (Top 10 LLM 2025, AI Exchange, GenAI Red Teaming Guide)
+  - Cite peer-reviewed academic sources using consistent format
+  - Recommend actively maintained, current security testing tools
+  - Provide clear, actionable remediation strategies
+  - Map threats to appropriate OWASP framework categories
+  - Include both technical and business impact context
+
+  🎯 TESTING FOCUS:
+  - Emphasize the "why" behind each test - what specific AI security risk it addresses
+  - Provide multiple payload examples showing different attack vectors
+  - Include both positive and negative test cases where appropriate
+  - Consider various AI system architectures (single model, multi-agent, RAG, etc.)
+  - Address different threat actors (external attackers, malicious users, supply chain)
+
+  📖 EXAMPLE STRUCTURE:
+  ```markdown
+  ## AITG-APP-XX - Testing for [Specific Vulnerability]
+
+  ### Summary
+  [Clear description of vulnerability, why it matters for AI systems, potential impact]
+
+  ### Test Objectives
+  - Verify AI system resistance to [specific attack type]
+  - Validate effectiveness of [specific security control]
+  - Assess [specific security behavior or output]
+
+  ### Test/Payloads
+
+  **Payload 1: [Attack Type Name]**
+  - **Test:** [Description of what this test does]
+  - **Example:**
+    ```
+    [Sanitized payload using <PLACEHOLDER> markers]
+    ```
+  - **Response Indicating Vulnerability:** [What response shows a security issue]
+
+  ### Attended Output
+  The AI system should effectively:
+  - [Expected secure behavior 1]
+  - [Expected defensive response 2]
+  - [Expected protective measure 3]
+
+  ### Remediation
+  - [Specific mitigation strategy 1]
+  - [Implementation guidance 2]
+  - [Best practice recommendation 3]
+
+  ### Suggested Tools for This Specific Test
+  - **[Tool Name]**: [Description and specific use case]
+    - **URL**: [Link to official tool]
+
+  ### References
+  - **Title**: [Resource title]
+    - **Author**: [Author/Organization]
+    - **Link**: [URL]
+  ```
+
+  Remember: The goal is to create educational, comprehensive security testing guidance that helps defenders identify and mitigate AI-specific vulnerabilities while maintaining ethical standards and responsible disclosure principles.
